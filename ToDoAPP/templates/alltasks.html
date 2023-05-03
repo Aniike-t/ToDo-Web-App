@@ -1,0 +1,74 @@
+<style>
+  body {
+    background-image: url({{ url_for('static', filename =bg_img ) }});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cal.scss') }}">
+  
+  <div class="greeting-container">
+    <div class="greeting">Hi {{usr}},<br>Total Tasks : {{Total_tasks}}</div>
+    <div class="date">Today's Date :<br>{{ current_date }}</div>
+  </div>
+
+
+
+  <form class="form" action="#" method="POST" enctype="multipart/form-data">
+
+    <div class = "box">
+      <div class="headin">Total Tasks : {{Total_tasks}}<br><br>Completed : {{LenTaskDone}} <br><br>Progress : {{ progress_percentage }}%</div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: {{ progress_percentage }}%"></div>
+      </div>
+    </div>
+
+
+      <div class="button-container">
+        <button class="submit-taskcreate" name="createtask" value="c">&#128221;Create Todo Task</button>
+      </div>
+    
+      <div class="uploadcontainer">
+        <div class="headin">Upload From Local Storage</div>
+        <label class="custom-file-upload">
+          <input class ="UploadExcel" type="file" name="file" id="fileInput">
+        </label>
+          <button  type="submit" name ="UploadExcel">Upload</button>
+      </div>
+  
+    {% if tasks %}
+      {% for task in tasks %}
+        <div class="task-container">
+          <h3>{{ task.taskname }}</h3>
+          <p>Priority: {{ task.priority }}</p>
+          <p>Scheduled datetime: {{ task.datetime_scheduled }}</p>
+          <p> Type Of Task : {{ task.typeoftask }} </p>
+          
+          <a style="text-decoration:none" href="/homepage/alltask/{{ task.id }}/markdone" class="donetaskbutton" role="button">Task Done</a>
+          <a style="text-decoration:none" href="/homepage/alltask/{{ task.id }}/update" class="updatetaskbutton" role="button">Update Task</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="task-container no-tasks">
+        No Tasks Assigned
+    </div>
+    {% endif %}
+
+
+
+    
+
+    <div class="options-container">
+      <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+      <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+      <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+      <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+      <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+      <button class="submit logout" name="logout" value="logout">Logout</button>
+    </div>
+  
+  </form>
+  
+  </body>
+  

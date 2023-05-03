@@ -1,0 +1,27 @@
+<style>
+    body{
+      background-image: url({{ url_for('static', filename ='Light.png' ) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='repass.scss') }}">
+
+<form method="POST">
+    <div class="resetpasscon">
+        <p class="headin">Enter OTP </p>
+
+        <input placeholder="OTP" type="text" name="otp" id="username" >
+
+    <div class = "button-container">
+        <button class="pass-submit" name="submitverify" type="submit">Submit</button>
+
+    </div>
+
+    </div>
+
+
+
+
+</form>

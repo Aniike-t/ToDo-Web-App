@@ -1,0 +1,211 @@
+.options-container {
+margin-left: 1%;
+margin-top: 1%;
+height: 90%;
+overflow-y: auto;
+position: fixed;
+top: 0px;
+left: 0px;
+bottom: 0px;
+width: 17%;
+background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.26);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+border-radius: 25px;
+border:10px #00000077;
+}
+  
+  
+.options-container button {
+font-family: 'Lucida Sans';
+background-color: #ffffff00;
+color: #252525;
+font-weight: 400;
+text-align: start;
+padding-top: 0px;
+padding: 10px 10px;
+line-height: 1em;
+text-shadow: #000000;
+font-size: 20px;
+min-height: 50px;
+max-height: fit-content;
+margin: 5px 0;
+border: #fff9f900;
+border-radius: 25px;
+}
+.options-container button:hover {
+box-shadow: 7px 5px 56px -14px #000000;
+}
+.options-container button:active {
+transform: scale(0.97);
+box-shadow: 7px 5px 56px -10px #000000;
+}
+.greeting-container {
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+font-family: 'Lucida Sans';
+max-height: 15%;
+min-height: 15%;
+border-radius: 25px;
+margin-top: 1.1%;
+margin-left: 21%;
+width: 80%;
+-webkit-text-fill-color: #252525;
+background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+margin-right: 5%;
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+z-index: -10;
+}
+
+.greeting {
+margin-top: 2.5%;
+margin-left: 7%;
+font-size: 40px;
+}
+
+
+
+::-webkit-scrollbar {
+height: 80%;
+width: 15px;
+border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+background-color: #CDD4DB;
+}
+::-webkit-scrollbar-thumb {
+background-color: #EDDBF3;
+border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+background-color: #8b86e46b;
+}
+.Settingscon1:hover{
+  box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+}
+.Settingscon1{
+    margin-right: 50%;
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px;
+    margin-top: 1%;
+    background-color: #ffffff4d;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    font-family: 'Lucida Sans';
+    margin-left: 21%;
+    font-weight: 400;
+}
+
+
+.ClearAllbutton{
+    background-color: #6363634d;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    border-color:1px solid #000000;
+    width: 200px;
+    color: #000000;
+    
+  }
+  a:hover{
+    box-shadow: 0px 2px 4px 3px rgba(219, 219, 219, 0.274);
+    border: 2px #454545;
+    background-color: #000000a9;
+    color: white;
+  }
+  .themecon:hover{
+    box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+  
+  }
+  .themecon{
+    margin-top: 1%;
+    margin-left: 21%;
+    margin-right: 50%;
+    background-color: #ffffff4d;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding-top: 2%;
+    padding-left: 1%;
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    padding-bottom: 1%;
+    border-radius: 20px;
+  }
+  select[name="bgcolor"] ,select[name='change_up']{
+    margin-top: 2%;
+    margin-right: 1%;
+    align-items: start;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px #c4c4c4c5;
+    width: 75%;
+    appearance: none;
+    background-color:  #6363634d;
+  }
+  .themesubmit{
+    background-color: #ffffff00;
+    padding: 10px 13px 10px 13px;
+    border-radius: 20px;
+    border: 0px #ffffff00;
+  }
+  .themecon button:hover{
+    box-shadow: 0px 0px 5px rgba(69, 69, 69, 0.5);
+  }
+
+  .verifybutton{
+    margin-left: 8%;
+    background-color: #5353533d;
+    padding: 10px 13px 10px 13px;
+    border-radius: 20px;
+    border: 0px #ffffff00;
+  }
+  .box button:hover{
+    box-shadow: 0px 0px 5px rgba(69, 69, 69, 0.5);
+  }
+
+  .box:hover{
+    box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+  
+  }
+  .box{
+    margin-top: 0%;
+    position: absolute;
+    margin-left: 52%;
+    width: 25%;
+    margin-right: 1%;
+    background-color: #ffffff4d;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    align-items: center;
+    min-height: 20%;
+    max-height: 20%;
+    border-radius: 25px;
+    justify-content: center;
+  }
+  .headin{
+    font-weight: 600;
+    margin-left: 8%;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    padding: 1%;
+  }
+  .phverified{
+    font-weight: 600;
+    margin-left: 8%;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    padding: 1%;
+  }

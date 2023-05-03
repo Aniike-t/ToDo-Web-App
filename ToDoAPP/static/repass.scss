@@ -1,0 +1,64 @@
+.resetpasscon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 40%;
+    margin-right: 40%;
+    max-width: 20%;
+    gap: 10px;
+    background-color: #ffffff4d;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding: 20px;
+    border-radius: 35px;
+    font-family: 'Lucida Sans';
+  }
+  
+  .headin {
+    font-size: larger;
+    color: #252525;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .pass-submit {
+    background-color: #ffffff00;
+    padding: 10px 13px 10px 13px;
+    border-radius: 15px;
+    border: 0px #ffffff00;
+    box-shadow: #252525;
+    width:45%;
+  }
+  
+  .resetpasscon button:hover {
+    box-shadow: 0px 0px 30px rgba(69, 69, 69, 0.5);
+  }
+  
+  input[type=text],input[type=password] {
+    background-color: rgba(255, 100, 100, 0);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    border: 0px;
+    color: #252525;
+  }
+  
+  input:focus {
+    outline: 0px;
+    background-color: rgba(9, 9, 9, 0.042);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  }
+  .resetpasscon:hover{
+    box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+  }
+  input:hover {
+    box-shadow: 1px 2px 7px 3px rgba(31, 38, 135, 0.116);
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   }

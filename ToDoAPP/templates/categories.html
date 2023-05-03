@@ -1,0 +1,63 @@
+<style>
+    body {
+      background-image: url({{ url_for('static', filename =bg_img ) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='cal.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Total Tasks : {{Total_tasks}}</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+  
+
+      <div class = "categorycon">
+        <label class = "bgcoltxt" for="prior"> Current Priority : {{ prior }} </label>
+          <select name="prior" id="prior">
+          <option name = "high" value="high">High</option>
+          <option name = "medium" value="medium">Medium</option>
+          <option name = "low" value="low">Low</option>
+         </select>
+        <button type="submit" name="priorsubmit" class="priorsubmit">Submit</button>
+      </div>
+
+
+
+
+    {% if tasks %}
+    
+    <h3>{{ prior }}</h3>
+    
+        {% for task in tasks %}
+      <div class="task-container">
+        <h3>{{ task.taskname }}</h3>
+        <p>Priority: {{ task.priority }}</p>
+        <p>Scheduled datetime: {{ task.datetime_scheduled }}</p>
+        
+        <a style="text-decoration:none" href="/homepage/alltask/{{ task.id }}/markdone" class="donetaskbutton" role="button">Task Done</a>
+        <a style="text-decoration:none" href="/homepage/alltask/{{ task.id }}/update" class="updatetaskbutton" role="button">Update Task</a>
+      </div>
+        {% endfor %}
+    {% else %}
+        <div class="task-container no-tasks">
+      No Tasks Assigned
+    </div>
+    {% endif %}
+  
+    <form class="form" action="#" method="POST" enctype="multipart/form-data">
+
+        <div class="options-container">
+            <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+            <button class="submit create-task-btn" name="todaytask" value="todaytask">&#128204;Today's Tasks</button>
+            <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+            <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+            <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+            <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+            <button class="submit logout" name="logout" value="logout">Logout</button>
+        </div>
+
+    </form>
+
+</body>

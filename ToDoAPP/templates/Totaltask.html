@@ -1,0 +1,72 @@
+
+<style>
+    body {
+      background-image: url({{ url_for('static', filename=bg_img) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='totaltask.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Total Tasks : {{Total_tasks}}</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+    
+
+    <div class="task-container-wrapper">
+        <div class="remaining-tasks">
+          {% if tasks %}
+          <h1 class = "remainingtask">Remaining Tasks</h1>
+            {% for task in tasks %}
+              <div class="task-container">
+                <h3>{{ task.taskname }}</h3>
+                <p>Priority : {{ task.priority }}</p>
+                <p>Scheduled : {{ task.datetime_scheduled }}</p>
+                <p> Type Of Task : {{ task.typeoftask }} </p>
+                <a style="text-decoration:none" href="/homepage/totaltask/{{ task.id }}/markdone" class="donetaskbutton" role="button">Task Done</a>
+                <a style="text-decoration:none" href="/homepage/totaltask/{{ task.id }}/update" class="updatetaskbutton" role="button">Update Task</a>
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="notasksassgn">
+              No Tasks Assigned
+            </div>
+          {% endif %}
+        </div>
+      
+        <div class="completed-tasks">
+          {% if rtasks %}
+          <h1 class = "completedtask">Completed Tasks</h1>
+            {% for rtask in rtasks %}
+              <div class="rtask-container">
+                <h3>{{ rtask.taskname }}</h3>
+                <p>Priority : {{ rtask.priority }}</p>
+                <p>Scheduled : {{ rtask.datetime_scheduled }}</p>
+                <p> Type Of Task : {{ rtask.typeoftask }} </p>
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="notaskcompleted">
+              No Tasks Completed
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+
+
+
+    <!--Baju ka container-->
+   <form methods="GET">
+      <div class="options-container">
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    </form>
+    
+    </body>

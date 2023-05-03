@@ -1,0 +1,70 @@
+
+<style>
+    body {
+      background-image: url({{ url_for('static', filename=bg_img) }});
+      background-repeat: repeat;
+      background-size: cover;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='notes.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Total Notes Taken : {{LenTotalNotes}}</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+
+    <form  method="POST">
+      <div class = "notes-container">
+      <h2>Create New Note</h2>
+      <label for="title_name">Title:</label>
+      <input required id="title_name"  name="title_name" type="text" placeholder="Title">
+      <br>
+      <label for="notes"></label>
+      <br>
+      <textarea id="notes" name="notes" rows="5" cols="50"  placeholder="Your Idea Here" required></textarea>
+      <br/>
+      
+      <button type="submit" name="submitnotes" class="submitnotes">Create Note</button>
+      </div>
+    </form>
+
+    <h2 class="heading">All Notes </h2>
+
+    {% if notesss %}
+      {% for notess in notesss %}
+        <div class="notesss-container">
+          <h3>{{ notess.title }} </h3><br>
+          <p> {{ notess.note }} </p><br>
+          <p> {{ notess.datetaken }} </p>
+          <a style="text-decoration:none" href="/homepage/notes/{{ notess.id }}/update" class="updatenotesbutton" role="button">Update Note</a>
+        
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="nonotes">
+        No Notes Taken
+    </div>
+    {% endif %}
+
+    
+
+    <!--Baju ka container-->
+   <form methods="GET">
+      <div class="options-container">
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+   
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    </form>
+
+
+
+      
+      
+  
+    
+    </body>

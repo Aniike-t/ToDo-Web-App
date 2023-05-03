@@ -1,0 +1,62 @@
+
+<style>
+    body {
+      background-image: url({{ url_for('static', filename=bg_img) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cal2.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Total Tasks : {{Total_tasks}}</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+    
+    <form class="form" action="#" method="POST">
+    
+        <div class="task-container">
+            <h2>Update Task</h2><br>
+            <form action="" method="post">
+              <label for="task_name">Task Name:</label>
+              <textarea required id="task_name" name="task_name" rows="5" cols="50">{{ task_name }}</textarea>
+              <br/>
+          
+              <label for="priority">Priority:</label>
+              <select name="priority" id="priority" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+
+              <label for="priority">Type Of Task</label>
+              <select name="typeoftask" id="priority">
+                <option value="Work">Work</option>
+                <option value="Home">Home</option>
+                <option value="Fitness">Fitness</option>
+              </select>
+
+          
+              <label for="datetime">Datetime Scheduled:</label>
+              <input required type="datetime-local" name="datetime" id="datetime">
+          
+              <button type="submitt" name="submitt" class="submitt">Update Task</button>
+              <button type="delete" name="delete" class="delete" >Delete Task</button>
+            </form>
+          </div>
+        </form>
+     <form method="POST">
+      <div class="options-container">
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+   
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    </form>
+    
+    
+    </body>
+    

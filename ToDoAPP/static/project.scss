@@ -1,0 +1,243 @@
+.options-container {
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 90%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 17%;
+
+background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 25px;
+    border:10px #00000077;
+    
+  }
+  
+  
+  .options-container button {
+    font-family: 'Lucida Sans';
+    background-color: #ffffff00;
+    color: #252525;
+    font-weight: 400;
+    text-align: start;
+    padding-top: 0px;
+    padding: 10px 10px;
+    line-height: 1em;
+    text-shadow: #000000;
+    font-size: 20px;
+    min-height: 50px;
+    max-height: fit-content;
+    margin: 5px 0;
+    border: #fff9f900;
+    border-radius: 25px;
+  }
+  .options-container button:hover {
+    box-shadow: 7px 5px 56px -14px #000000;
+   }
+   
+   .options-container button:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #000000;
+   }
+  
+  .greeting-container {
+    font-family: 'Lucida Sans';
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+
+    max-height: 150px;
+    min-height: 150px;
+    border-radius: 25px;
+    margin-top: 1.1%;
+    margin-left: 20%;
+    width: 80%;
+    -webkit-text-fill-color: #252525;
+    background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    z-index: -10;
+  }
+  
+  .greeting {
+    margin-top: 2.5%;
+    margin-left: 7%;
+    font-size: 40px;
+  }
+  
+  .date {
+    margin-top: 2.5%;
+    margin-right: 5%;
+    font-size: 40px;
+  }
+  
+  .notes-container:hover{
+    box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+  }
+
+  .notes-container {
+    font-family: 'Lucida Sans';
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 45%;
+    margin-left: 20%;
+    background-color: #f5f5f535;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #4031313c;
+
+  }
+
+  textarea{
+    border: 0px;
+    resize: none;
+    font-size: 18px;
+    padding-left:3%;
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-right: 3%;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.216);
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+  }
+
+
+  .submitnotes{
+    border: 0px;
+    margin-top: 2%;
+    height: 5%;
+    width: 25%;
+    align-items: center;
+    background-color: #8080804d;
+    border-radius: 20px
+  }
+  .notes-container button:hover{
+    box-shadow: 0px 2px 4px 6px #ccdeeec0;
+    border: 2px #454545;
+    background-color: #000000a9;
+    color: white;
+  }
+   .project-containerno-project{
+    margin-left: 21%;
+    font-size: 18px;
+    font-family: 'Lucida Sans';
+   }
+
+
+  input[type="text"]{
+    outline: #25252540;
+    border: 0px;
+    margin-bottom: 1%;
+    font-family: 'Lucida Sans';
+    font-size: 16px;
+    padding-left: 2%;
+    background-color: rgba(255, 255, 255, 0.216);
+    height: 5%;
+    width: 50%;
+    border-radius: 15px;
+  }
+  input[type=text]:focus {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+  }
+
+  label{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+
+    /* Change the scrollbar style */
+    ::-webkit-scrollbar {
+      height: 80%;
+      width: 15px;
+      border-radius: 40px;
+    }
+    
+    /* Change the scrollbar track */
+    ::-webkit-scrollbar-track {
+      
+      background-color: #CDD4DB;
+      
+    }
+    
+    /* Change the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      background-color: #EDDBF3;
+      border-radius: 20px;
+    }
+    
+    /* Change the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #8b86e46b;
+    }
+
+
+.heading{
+  font-size: 26px;
+  padding-top: 3%;
+  margin-left: 22%;
+  font-family: 'Lucida Sans';
+  font-weight: 500;
+}
+.notesss-container:hover{
+  box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+}
+.notesss-container {
+  font-family: 'Lucida Sans';
+  word-wrap: break-word;
+  max-width: 45%;
+  min-width: 45%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.275);
+  margin-right: 30%;
+  margin-left: 20%;
+  background-color: #ffffff16;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+
+
+
+
+.updatenotesbutton{
+  background-color: #9a9a9a8e;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  margin-left: 40%;
+  border-color:1px solid #000000;
+  margin-top: 3%;
+  width: 200px;
+  color: #000000;
+}
+a:hover{
+  background-color: #9c99ff;
+  box-shadow: #00000078;
+}
+.nonotes{
+  margin-left: 22%;
+  font-family: 'Lucida Sans';
+  font-size: 22px;
+  font-weight: 500;
+}

@@ -1,0 +1,333 @@
+.options-container {
+  margin-left: 1%;
+  margin-top: 1%;
+  height: 90%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 17%;
+
+  background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+
+
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 25px;
+
+  border:10px #00000077;
+  
+}
+
+
+.options-container button {
+  font-family: 'Lucida Sans';
+  background-color: #ffffff00;
+  color: #252525;
+  font-weight: 400;
+  text-align: start;
+  padding-top: 0px;
+  padding: 10px 10px;
+  line-height: 1em;
+  font-weight: 200;
+  text-shadow: #000000;
+  font-size: 20px;
+  min-height: 50px;
+  max-height: fit-content;
+  margin: 5px 0;
+  border: #fff9f900;
+  border-radius: 25px;
+}
+.options-container button:hover {
+  box-shadow: 7px 5px 56px -14px #000000;
+ }
+ 
+ .options-container button:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #000000;
+ }
+
+.greeting-container {
+  font-family: 'Lucida Sans';
+
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+
+
+  max-height: 150px;
+  min-height: 150px;
+  border-radius: 25px;
+  margin-top: 1.1%;
+  margin-left: 20%;
+  width: 80%;
+  -webkit-text-fill-color: #252525;
+  background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+  margin-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  z-index: -10;
+}
+
+.greeting {
+  margin-top: 2.5%;
+  margin-left: 7%;
+  font-size: 40px;
+}
+
+.date {
+  margin-top: 2.5%;
+  margin-right: 5%;
+  font-size: 40px;
+}
+
+
+
+.task-container:hover{
+  box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+}
+.task-container {
+  margin-right: 30%;
+  margin-left: 20%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #6a4a4a1a;
+  margin-top: 0;
+}
+
+.task-container h2 {
+  font-family: 'Lucida Sans';
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.task {
+  font-family: 'Lucida Sans';
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #33305a;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.494);
+}
+.no-tasks {
+  font-family: 'Lucida Sans';
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+  background-color: #33305a;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.505);
+}
+
+
+
+
+
+
+
+
+
+
+
+ /* Createtask*/
+.form {
+  align-items: center;
+  color: #252525;
+  font-family: 'Lucida Sans';
+  margin-left: 7.5%;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.task-container:hover{
+  box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+}
+
+.task-container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff20;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.332);
+  border-radius: 25px;
+}
+.submitt {
+  background-color: #87878772;
+  color: #252525;
+  text-align: center;
+  line-height: 1em;
+  font-weight: 200;
+  text-shadow: #000000;
+  font-size: 20px;
+  min-height: 40px;
+  max-height: 40px ;
+  max-height: fit-content;
+  border: 1px #000000;
+  border-radius: 20px;
+  margin-bottom: 1%;
+  min-width: 150px;
+  max-width: 200px;
+}
+.delete {
+  min-width: 150px;
+  max-width: 200px;
+  background-color: #87878772;
+  color: #252525;
+  text-align: center;
+  line-height: 1em;
+  font-weight: 200;
+  text-shadow: #000000;
+  font-size: 20px;
+  min-height: 40px;
+  max-height: 40px ;
+  max-height: fit-content;
+  border: 1px #000000;
+  border-radius: 20px;
+}
+
+
+.submit button:hover {
+  box-shadow: 7px 5px 56px -14px #000000;
+ }
+
+
+
+label {
+  font-size: 17px;
+  margin-bottom: 1%;;
+}
+
+
+.priority-label {
+  padding-top: 2%;
+  border-radius: 20px;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+select[name="priority"] {
+  margin-bottom: 1%;
+  margin-bottom: 1%;
+  align-items: start;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px #5b5b5bc5;
+  width: 100%;
+  margin-bottom: 20px;
+  appearance: none;
+  background-color: #b2b2b24b;
+}
+
+textarea{
+  resize: none;
+  font-size: 18px;
+  padding-left:3%;
+  padding-top:3%;
+  padding-bottom:3%;
+  padding-right: 3%;
+  word-wrap: break-word;
+  background-color: #b2b2b24b;
+  border-radius: 20px;
+  border: 1px #5b5b5bc5;
+  width: 100%;
+  height: 100px;
+}
+
+/* Target the input element */
+input[type="datetime-local"],
+select {
+  margin-bottom: 1%;
+  margin-bottom: 1%;
+  background-color: #b2b2b27c;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Target the calendar widget popup */
+input[type=datetime-local]:focus::-webkit-calendar-picker-indicator {
+  padding: 1px 1px;
+  background-color: #ffffff4b;
+  box-shadow: inset #98989824;
+  cursor: pointer;
+}
+
+/* Target the calendar widget table */
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  padding: 4px;
+  margin-left: 4px;
+}
+
+/* Target the date and time input fields */
+input[type=datetime-local]::-webkit-datetime-edit {
+  color: #333;
+}
+
+/* Target the date and time input fields in focus */
+input[type=datetime-local]::-webkit-datetime-edit:focus {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+
+.submit button::before{
+  background-color: #33305a;
+}
+.submit button::after{
+  background-color: #252525;
+}
+
+
+
+    /* Change the scrollbar style */
+    ::-webkit-scrollbar {
+      height: 80%;
+      width: 15px;
+      border-radius: 20px;
+    }
+    
+    /* Change the scrollbar track */
+    ::-webkit-scrollbar-track {
+      margin-right: 3%;
+      border-radius: 40px;
+      background-color: #C7C5D1;
+      
+    }
+    
+    /* Change the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      background-color: #C7C5D1;
+      border-radius: 20px;
+    }
+    
+    /* Change the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #8b86e46b;
+    }
+

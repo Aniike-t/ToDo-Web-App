@@ -1,0 +1,203 @@
+.options-container {
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 90%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 17%;
+
+background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 25px;
+    border:10px #00000077;
+    
+  }
+  
+  
+  .options-container button {
+    font-family: 'Lucida Sans';
+    background-color: #ffffff00;
+    color: #252525;
+    font-weight: 400;
+    text-align: start;
+    padding-top: 0px;
+    padding: 10px 10px;
+    line-height: 1em;
+    text-shadow: #000000;
+    font-size: 20px;
+    min-height: 50px;
+    max-height: fit-content;
+    margin: 5px 0;
+    border: #fff9f900;
+    border-radius: 25px;
+  }
+  .options-container button:hover {
+    box-shadow: 7px 5px 56px -14px #000000;
+   }
+   
+   .options-container button:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #000000;
+   }
+  
+  .greeting-container {
+    font-family: 'Lucida Sans';
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+
+    max-height: 150px;
+    min-height: 150px;
+    border-radius: 25px;
+    margin-top: 1.1%;
+    margin-left: 20%;
+    width: 80%;
+    -webkit-text-fill-color: #252525;
+    background: linear-gradient(180deg, #ffffff38, #dfdfdf38, #b4b4b438);;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    z-index: -10;
+  }
+  
+  .greeting {
+    margin-top: 2.5%;
+    margin-left: 7%;
+    font-size: 40px;
+  }
+  
+  .date {
+    margin-top: 2.5%;
+    margin-right: 5%;
+    font-size: 40px;
+  }
+  
+  .proname{
+    margin-top: 2%;
+    font-family: 'Lucida Sans';
+    margin-left: 22%;
+    font-weight: 400;
+  }
+  .descrip{
+    font-weight: 200;
+    margin-top: 1%;
+    font-family: 'Lucida Sans';
+    margin-left: 22%;
+  }
+
+  .chatscontainer:hover{
+    box-shadow: 5px 13px 37px 10px rgba( 31, 38, 135, 0.37 );
+
+  }
+
+  .chatscontainer{
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+
+    max-height: 230px;
+    overflow-y: scroll;
+    padding: 5px 5px 5px 5px;
+    border-radius: 20px;
+    margin-right: 20%;
+    background-color: #679ebd3a;
+    font-family: 'Lucida Sans';
+    margin-left: 21%;
+  }
+  .msgs{
+    padding: 10px 10px 10px 10px;
+    background-color: #8181814d;
+    margin-right: 10%;
+    border-radius: 20px;
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    margin-left: 2%;
+    word-wrap: break-word;
+  }
+  .datetimesent{
+    font-family: 'Lucida Sans';
+    font-size: 10px;
+    margin-left: 2%;
+  }
+  .chatsheading{
+    margin-left: 2%;
+    font-family: 'Lucida Sans';
+  }
+
+  textarea{
+    resize: none;
+    font-size: 18px;
+    padding-left:2%;
+    padding-top:1%;
+    padding-bottom:2%;
+    padding-right: 2%;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 20px;
+    width: 59%;
+    margin-top: 3%;
+    margin-left: 21%;
+    height: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
+    overflow:hidden;
+    border: 0.1px #000000;
+  }
+  .submitt{
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    margin-left: 21%;
+    padding: 10px 10px 10px 10px;
+    margin-top: 1%;
+    background-color: rgba(106, 106, 106, 0.089);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26);
+    
+  }
+  .nochatsavail{
+    margin-left: 2%;
+    font-family: "Lucida Sans";
+  }
+
+
+
+  
+  /* Change the scrollbar style */
+  ::-webkit-scrollbar {
+    height: 80%;
+    width: 15px;
+    border-radius: 20px;
+  }
+  
+  
+  /* Change the scrollbar track */
+  ::-webkit-scrollbar-track {
+    
+    background-color: #C1D5E1;
+    
+  }
+  
+  /* Change the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #EDDBF3;
+    border-radius: 20px;
+  }
+  
+  /* Change the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #8b86e46b;
+  }

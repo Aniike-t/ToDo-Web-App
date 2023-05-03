@@ -1,0 +1,84 @@
+<style>
+    body {
+      background-image: url({{ url_for('static', filename =bg_img) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Settings</div>
+    </div>
+
+
+    <form method="POST">
+    <div class = "box" >
+      <h3 class = "headin" > Phone Number : <br> {{phoneno}} </h3>
+      {% if user_verify == 0 %}
+        <button class="verifybutton" name="verifybutton" value="verifybutton">Verify</button>
+      {% else %}
+        <h3 class = "phverified" >Phone Number Verified<br></h3>
+      {% endif %}
+    </div>
+  </form>
+
+
+    <div class = "Settingscon1" >
+        <h3> Username : {{usr}} </h3>
+        <h3> Unique Key: {{u_key}}   </h3>
+    </div>
+    <div class = "Settingscon1" >
+        <h3> Tasks : {{tasks_assn}} </h3>
+        <h3> Notes : {{notes_assn}} </h3>
+        <a style="text-decoration:none" href="/settings/{{ usr }}/clearall" class="ClearAllbutton" role="button">Clear All</a>
+    </div>
+
+    <form method="POST">
+    <div class = "themecon">
+    <label class = "bgcoltxt" for="bgcol">Background Theme : {{ bg_img }} </label>
+      <select name="bgcolor" id="bgcolor">
+      <option name = "1" value="1">Light</option>
+      <option name = "2" value="2">Paper</option>
+      <option name = "3" value="3">Material</option>
+      <option name = "4" value="4">Solid Purple</option>
+      <option name = "5" value="5">Solid Grey</option>
+      <option name = "6" value="6">Ocean</option>
+    </select>
+    <button type="submit" name="themesubmit" class="themesubmit">Submit</button>
+  </div>
+   </form>
+
+  <div class = "themecon">
+    <form method="POST">
+      <label class = "bgcoltxt" for="bgcol">Change Username Password</label>
+        <select name="change_up" id="change_up">
+        <option name = "1" value="1">Reset Password With Old Passord</option>
+        <option name = "2" value="2">Reset Password With Unique Key</option>
+        <option name = "3" value="3">Change Username </option>
+      </select>
+      <button type="submit" name="chsubmit" class="themesubmit">Submit</button>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+    <form method="POST">
+    <div class="options-container" >
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+   
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    
+    </form>
+    
+    </body>

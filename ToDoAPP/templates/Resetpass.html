@@ -1,0 +1,27 @@
+<style>
+    body{
+      background-image: url({{ url_for('static', filename ='Light.png' ) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='repass.scss') }}">
+
+<form method="POST">
+    <div class="resetpasscon">
+        <p class="headin">Reset Password</p>
+
+        <input placeholder="Username" type="text" name="username" id="username" >
+
+        <input placeholder="Current Password" type="password" name="oldpass" id="username" >
+
+        <input placeholder="New Password" type="password" name="pass1" id="username" >
+
+        <input placeholder="Re-Enter New Password" type="password" name="pass2" id="username" >
+        <div class = "button-container">
+            <button class="pass-submit" name="pass-submit" type="submit">Submit</button>
+            <button class="pass-submit" name="settings" type="submit">Settings</button>
+        </div>
+    </div>
+</form>

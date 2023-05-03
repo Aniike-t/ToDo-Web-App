@@ -1,0 +1,49 @@
+
+<style>
+  body {
+    background-image: url({{ url_for('static', filename =bg_img ) }});
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='abt_project.scss') }}">
+  
+  <div class="greeting-container">
+    <div class="greeting">Hi {{usr}},<br>About Project</div>
+    <div class="date">Today's Date :<br>{{ current_date }}</div>
+  </div>
+  
+  <h1 class = "proname">Project : {{pro_name}}</h1>
+  <h2 class = "descrip">Description : {{pro_descrip}}</h2>
+
+
+  <div class="chatscontainer">
+  <h2 class = "chatsheading">Chats</h2>
+  {% if chats %}
+    {% for chat in chats %}
+    <p class = "msgs"> {{chat.user_id}} : {{ chat.message }}</p>
+    <p class = "datetimesent"> {{chat.sent_date}}</p>
+    {% endfor %}
+  {% else %}
+      <p class ="nochatsavail"> No Chats Available</p>
+  {% endif %}
+  </div>
+  
+    <form action="" method="post">
+      <textarea name="sendmsg" rows="3" cols="50"></textarea>
+      <br/>
+      <button name="submitt" class="submitt">Send</button>
+      
+    <div class="options-container">
+      <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+      <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+      <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+      <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+      <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+      <button class="submit logout" name="logout" value="logout">Logout</button>
+    </div>
+  
+  </form>
+  
+  </body>
+  

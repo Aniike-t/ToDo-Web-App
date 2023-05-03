@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    
+{% endblock %}
+
+{% block body %}
+    <body style="background-color: #353C4E;">
+    <link rel="stylesheet" href="{{ url_for('static', filename='error.css') }}">
+    <div class="load" action="#" method="POST">
+        <form class ="headin" action="" method="POST">
+        ERROR : <br> {{error}} <br><br>
+        <button class="GO_BACK" name="goback">
+            Prevoius Page
+        </button>
+    </form>
+    </div>
+{% endblock %} 

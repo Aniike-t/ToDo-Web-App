@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    
+      
+<style>
+    body{
+      background-image: url({{ url_for('static', filename ='Light.png' ) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>  
+{% endblock %}
+
+{% block body %}
+    <body style="background-color: #FBE7C6;">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <form class="form" action="#" method="POST">
+        <p class="heading">SignUp Page</p>
+        <input class="input" name="username" placeholder="Username" type="text">
+        <input class="input" name="password1" placeholder="Password" type="password">
+        <input class="input" name="password2" placeholder="Password" type="password">
+        <input class="input" name="phone_number" placeholder="Phone Number" type="text">
+        <div class="button-container">
+    		<button class="btn signin" name="BtnSignIn">Sign In</button>
+    		<button class="btn signup" name="BtnSubmit">Submit</button>
+  		</div>
+    </form>
+{% endblock %} 

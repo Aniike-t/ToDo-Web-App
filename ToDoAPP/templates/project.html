@@ -1,0 +1,76 @@
+
+<style>
+    body {
+      background-image: url({{ url_for('static', filename = bg_img) }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='project.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Projects</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+
+
+
+
+
+    <form  method="POST">
+      <div class = "notes-container">
+      <h2>Create New Project</h2>
+      <br>
+      <label for="title_name">Project Title:</label>
+      <input required id="title_name"  name="pro_name" type="text" placeholder="Title">
+      <br>
+      <label for="title_name">User 2 : </label>
+      <input required id="title_name"  name="user2" type="text" placeholder="Username">
+      <br>
+      <label for="title_name">User 3 : </label>
+      <input required id="title_name"  name="user3" type="text" placeholder="Username">
+
+
+      <br>
+      <label for="notes"></label>
+      <br>
+      <textarea id="notes" name="descrip" rows="5" cols="50"  placeholder="Project Description Here" required></textarea>
+      <br/>
+      
+      <button type="submit" name="submitt" class="submitnotes">Create Project</button>
+      </div>
+    </form>
+
+    <h2 class="heading">All Projects</h2>
+
+    {% if projects %}
+      {% for project in projects %}
+        <div class="notesss-container">
+          <h3>Project Name : {{ project.name }} </h3><br>
+          <p> Description : {{ project.description }} </p><br>
+          <p> Date Created : {{ project.created_date }} </p>
+          <a style="text-decoration:none" href="/homepage/projects/{{ project.id }}/more" class="updatenotesbutton" role="button">About Project</a>
+        
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="project-containerno-project">
+        No Projects Available
+    </div>
+    {% endif %}
+    
+
+    <!--Baju ka container-->
+   <form methods="GET">
+      <div class="options-container">
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+   
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    </form>
+    
+    </body>

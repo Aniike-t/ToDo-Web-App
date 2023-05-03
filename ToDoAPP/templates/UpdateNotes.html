@@ -1,0 +1,44 @@
+
+<style>
+    body {
+      background-image: url({{ url_for('static', filename=bg_img) }});
+      background-repeat: repeat;
+      background-size: cover;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='notes.scss') }}">
+    
+    <div class="greeting-container">
+      <div class="greeting">Hi {{usr}},<br>Total Notes Taken : {{LenTotalNotes}}</div>
+      <div class="date">Today's Date :<br>{{ current_date }}</div>
+    </div>
+
+    <form  method="POST">
+      <div class = "notes-container">
+      <h2>Update Note</h2>
+      <label for="title_name">Title:</label>
+      <input required id="title_name"  name="title_name" type="text" placeholder = "Previous Title: {{title}} ">
+      <br>
+      <label for="notes"></label>
+      <br>
+      <textarea id="notes" name="notes" rows="5" cols="50"  placeholder="Your Idea Here" required> {{notes}} </textarea>
+      <br/>
+      
+      <button type="submit" name="updatenotes" class="submitnotes">Update Note</button>
+      <button type="submit" name="deletenotes" class="submitnotes">Delete Note</button>
+      </div>
+    </form>
+
+    <!--Baju ka container-->
+   <form methods="GET">
+      <div class="options-container">
+        <button class="submit all-tasks-btn" name="currenttasks" value="currenttasks">&#128198; Remaining Tasks</button>
+   
+        <button class="submit delete-task-btn" name="alltasks" value="alltasks">&#128228; All Task</button>
+        <button class="submit notes-btn" name="notes" value="notes">&#128221; Notes</button>
+        <button class="submit projects-btn" name="projects" value="projects">&#128187; Projects</button>
+        <button class="submit settings-btn" name="settings" value="settings">	&#x2699;  Settings</button>
+        <button class="submit logout" name="logout" value="logout">Logout</button>
+      </div>
+    </form> 
+    </body>
